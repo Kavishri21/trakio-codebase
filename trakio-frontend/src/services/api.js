@@ -1,5 +1,8 @@
-// Uses local backend if running locally (via .env), otherwise falls back to your live Render backend
-const BASE_URL = import.meta.env.VITE_API_URL || "https://kanban-backend-ljud.onrender.com/api";
+// VITE_API_URL must be set in environment variables for each deployment:
+//   Local dev  → set in trakio-frontend/.env  (e.g. VITE_API_URL=http://localhost:8080/api)
+//   Vercel     → set in Vercel project Environment Variables
+//   AWS        → set in your hosting environment config
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080/api";
 
 function getHeaders() {
   const token = localStorage.getItem("token");
