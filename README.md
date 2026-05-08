@@ -7,7 +7,7 @@ Monorepo containing frontend and backend for the Trakio project.
 | Folder | Description | Tech Stack |
 |--------|-------------|------------|
 | `trakio-frontend/` | React frontend | React, Vite, Redux |
-| `trakio-backend/` | Spring Boot API | Java, Spring Boot, PostgreSQL |
+| `trakio-backend/` | Spring Boot API | Java, Spring Boot, MongoDB |
 
 ## Development
 
