@@ -1,0 +1,56 @@
+# ============================================================
+# ROOT-LEVEL GITIGNORE for trakio-codebase monorepo
+# This acts as a safety net on top of the subfolder .gitignores
+# ============================================================
+
+# ── BACKEND SECRETS (Spring Boot) ───────────────────────────
+**/application.properties
+**/application-local.properties
+**/application-dev.properties
+**/application-prod.properties
+**/application-staging.properties
+
+# ── FRONTEND SECRETS (React / Vite) ─────────────────────────
+**/.env
+**/.env.local
+**/.env.development
+**/.env.production
+**/.env.staging
+**/.env.*
+
+# ── BUILD ARTIFACTS ─────────────────────────────────────────
+# Java / Maven
+**/target/
+**/*.jar
+**/*.war
+**/*.class
+
+# Node / Vite
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/.vite/
+
+# ── IDE & OS FILES ───────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── LOGS ─────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── MISC ─────────────────────────────────────────────────────
+*.local
