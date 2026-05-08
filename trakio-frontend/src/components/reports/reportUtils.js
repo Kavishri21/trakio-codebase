@@ -348,7 +348,7 @@ export function exportToCSV(tasks, filename, allUsers = [], allTeams = []) {
 
   const link = document.createElement("a");
   link.setAttribute("href", url);
-  link.setAttribute("download", filename || `kanban-report-${new Date().toISOString().split("T")[0]}.csv`);
+  link.setAttribute("download", filename || `trakio-report-${new Date().toISOString().split("T")[0]}.csv`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

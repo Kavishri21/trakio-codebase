@@ -26,9 +26,9 @@ public class EmailService {
         String inviteLink = frontendUrl + "/accept-invite?token=" + token;
 
         String htmlContent = "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px;'>"
-            + "<h2 style='color: #1d4ed8; margin-bottom: 8px;'>You're invited to join Kanban Board!</h2>"
+            + "<h2 style='color: #1d4ed8; margin-bottom: 8px;'>You're invited to join Trakio!</h2>"
             + "<p style='color: #374151;'>Hi <strong>" + toName + "</strong>,</p>"
-            + "<p style='color: #374151;'>You've been invited by <strong>" + inviterName + "</strong> to join the team on Kanban Board.</p>"
+            + "<p style='color: #374151;'>You've been invited by <strong>" + inviterName + "</strong> to join the team on Trakio.</p>"
             + "<a href='" + inviteLink + "' style='display: inline-block; background: #2563eb; color: white; "
             + "padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; "
             + "font-size: 15px; margin: 20px 0;'>Set password &amp; join</a>"
@@ -40,9 +40,9 @@ public class EmailService {
         try {
             // Build request body as a proper Map so Jackson handles all escaping
             Map<String, Object> body = Map.of(
-                "sender", Map.of("name", "Kanban Board", "email", "dr.kavi21k@gmail.com"),
+                "sender", Map.of("name", "Trakio", "email", "dr.kavi21k@gmail.com"),
                 "to", List.of(Map.of("email", toEmail, "name", toName)),
-                "subject", "You're invited to join Kanban Board",
+                "subject", "You're invited to join Trakio",
                 "htmlContent", htmlContent
             );
 
@@ -78,7 +78,7 @@ public class EmailService {
         String htmlContent = "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #f8fafc; border-radius: 12px;'>"
             + "<div style='background: white; border-radius: 10px; padding: 32px; border: 1px solid #e2e8f0;'>"
             + "<h2 style='color: #1d4ed8; margin-bottom: 4px; font-size: 20px;'>📋 New Task Assigned</h2>"
-            + "<p style='color: #64748b; margin-top: 0; font-size: 14px;'>Kanban Board Notification</p>"
+            + "<p style='color: #64748b; margin-top: 0; font-size: 14px;'>Trakio Notification</p>"
             + "<hr style='border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;'/>"
             + "<p style='color: #374151; font-size: 15px;'>Hi <strong>" + toName + "</strong>,</p>"
             + "<p style='color: #374151; font-size: 15px;'><strong>" + assignerName + "</strong> has assigned a new task to you.</p>"
@@ -89,12 +89,12 @@ public class EmailService {
             + "<p style='margin: 0; font-size: 13px; color: #64748b;'>Team: <strong style='color: #374151;'>" + teamName + "</strong></p>"
             + "</div>"
             + "<a href='" + boardUrl + "' style='display: inline-block; background: #2563eb; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px; margin-top: 8px;'>View Your Board →</a>"
-            + "<p style='color: #9ca3af; font-size: 13px; margin-top: 28px;'>You are receiving this because you are a member of " + teamName + " on Kanban Board.</p>"
+            + "<p style='color: #9ca3af; font-size: 13px; margin-top: 28px;'>You are receiving this because you are a member of " + teamName + " on Trakio.</p>"
             + "</div></div>";
 
         try {
             Map<String, Object> body = Map.of(
-                "sender", Map.of("name", "Kanban Board", "email", "dr.kavi21k@gmail.com"),
+                "sender", Map.of("name", "Trakio", "email", "dr.kavi21k@gmail.com"),
                 "to", List.of(Map.of("email", toEmail, "name", toName)),
                 "subject", "New task assigned to you: " + taskTitle,
                 "htmlContent", htmlContent
@@ -128,7 +128,7 @@ public class EmailService {
         String htmlContent = "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #f8fafc; border-radius: 12px;'>"
             + "<div style='background: white; border-radius: 10px; padding: 32px; border: 1px solid #e2e8f0;'>"
             + "<h2 style='color: #1d4ed8; margin-bottom: 4px; font-size: 20px;'>🚀 You've been added to a Team</h2>"
-            + "<p style='color: #64748b; margin-top: 0; font-size: 14px;'>Kanban Board Notification</p>"
+            + "<p style='color: #64748b; margin-top: 0; font-size: 14px;'>Trakio Notification</p>"
             + "<hr style='border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;'/>"
             + "<p style='color: #374151; font-size: 15px;'>Hi <strong>" + toName + "</strong>,</p>"
             + "<p style='color: #374151; font-size: 15px;'>You have been added to the team <strong>" + teamName + "</strong> by <strong>" + requesterName + "</strong>.</p>"
@@ -136,12 +136,12 @@ public class EmailService {
             + "<p style='margin: 0; font-size: 16px; color: #1e293b;'>You can now access tasks and collaborate within <strong>" + teamName + "</strong>.</p>"
             + "</div>"
             + "<a href='" + boardUrl + "' style='display: inline-block; background: #2563eb; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px; margin-top: 8px;'>Go to Dashboard →</a>"
-            + "<p style='color: #9ca3af; font-size: 13px; margin-top: 28px;'>Manage your tasks and teams efficiently on your Kanban Board.</p>"
+            + "<p style='color: #9ca3af; font-size: 13px; margin-top: 28px;'>Manage your tasks and teams efficiently on your Trakio.</p>"
             + "</div></div>";
 
         try {
             Map<String, Object> body = Map.of(
-                "sender", Map.of("name", "Kanban Board", "email", "dr.kavi21k@gmail.com"),
+                "sender", Map.of("name", "Trakio", "email", "dr.kavi21k@gmail.com"),
                 "to", List.of(Map.of("email", toEmail, "name", toName)),
                 "subject", "You've been added to a new team: " + teamName,
                 "htmlContent", htmlContent

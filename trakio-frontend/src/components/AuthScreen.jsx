@@ -111,7 +111,7 @@ export default function AuthScreen() {
             </div>
             <h2 className="text-2xl font-extrabold text-blue-700">You're invited!</h2>
             <p className="text-slate-500 mt-2 text-sm">
-              {inviteName ? `Hi ${inviteName}, set` : "Set"} a password to join Kanban Board.
+              {inviteName ? `Hi ${inviteName}, set` : "Set"} a password to join Trakio.
             </p>
           </div>
 
@@ -182,7 +182,7 @@ export default function AuthScreen() {
             {isLogin ? "Welcome Back" : "Create Account"}
           </h2>
           <p className="text-slate-500 mt-2 text-sm">
-            {isLogin ? "Sign in to manage your kanban board." : "Sign up to track tasks effortlessly."}
+            {isLogin ? "Sign in to manage your Trakio board." : "Sign up to track tasks effortlessly."}
           </p>
         </div>
 
